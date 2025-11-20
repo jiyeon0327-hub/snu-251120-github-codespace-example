@@ -48,20 +48,3 @@ addBtn.addEventListener('click', () => {
     detailInput.value = '';
   }
 });
-
-// 경력 추가 기능 (간단한 JS)
-const addBtn = document.querySelector('.career-add-btn');
-const periodInput = document.querySelectorAll('.career-input')[0];
-const detailInput = document.querySelectorAll('.career-input')[1];
-const list = document.querySelector('.career-list');
-addBtn.addEventListener('click', () => {
-  const period = periodInput.value.trim();
-  const detail = detailInput.value.trim();
-  if (period && detail) {
-    const li = document.createElement('li');
-    li.innerHTML = `<span class="career-period">${period}</span><span class="career-detail">${detail}</span>`;
-    list.prepend(li);
-    periodInput.value = '';
-    detailInput.value = '';
-  }
-});
