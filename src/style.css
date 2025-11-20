@@ -1,3 +1,87 @@
+/* 전체 배경에 컬러풀한 움직이는 그라데이션 */
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(120deg, #ff6a00, #ee0979, #00c3ff, #ffe259, #43e97b, #38f9d7, #fa8bff, #f3f3f3);
+  background-size: 300% 300%;
+  animation: bg-move 12s ease-in-out infinite alternate;
+  font-family: 'Pretendard', 'Noto Sans KR', Arial, sans-serif;
+}
+
+@keyframes bg-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* #app에 카드 느낌의 반투명, 네온 효과 */
+#app {
+  max-width: 540px;
+  margin: 60px auto;
+  background: rgba(255,255,255,0.18);
+  border-radius: 32px;
+  box-shadow: 0 8px 40px 0 #ee097988, 0 0 0 8px #00c3ff33;
+  padding: 48px 38px 38px 38px;
+  position: relative;
+  overflow: hidden;
+  border: 2.5px solid #fff6;
+  backdrop-filter: blur(12px) saturate(1.2);
+}
+
+/* 무지개 그라데이션 텍스트 */
+.rainbow-text {
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #00c3ff, #ffe259, #43e97b, #38f9d7, #fa8bff);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: rainbow-move 5s linear infinite alternate;
+}
+@keyframes rainbow-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* 네온 효과 텍스트 */
+.neon-text {
+  color: #fff;
+  text-shadow: 0 0 8px #00c3ff, 0 0 16px #ee0979, 0 0 32px #ff6a00;
+  font-weight: 700;
+}
+
+/* 프로필 이모지 애니메이션 */
+.animated-profile {
+  animation: rotate-profile 6s linear infinite alternate;
+}
+@keyframes rotate-profile {
+  0% { transform: rotate(-10deg) scale(1); }
+  50% { transform: rotate(10deg) scale(1.08); }
+  100% { transform: rotate(-10deg) scale(1); }
+}
+
+.emoji {
+  font-size: 1.5em;
+  animation: emoji-bounce 1.5s infinite alternate;
+}
+@keyframes emoji-bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px) scale(1.15); }
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-hand 2s infinite;
+  transform-origin: 70% 70%;
+}
+@keyframes wave-hand {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
 /* 움직이는 배경 효과 */
 body {
   position: relative;
