@@ -1,24 +1,25 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+import './style.css';
 
-setupCounter(document.querySelector('#counter'))
+const app = document.getElementById('app');
+app.innerHTML = `
+  <main class="intro-container">
+    <section class="profile-section">
+      <h1 class="name">홍길동</h1>
+      <p class="bio">안녕하세요! 저는 웹 프론트엔드 개발자 홍길동입니다.<br>사용자 경험과 깔끔한 UI/UX에 관심이 많습니다.</p>
+    </section>
+    <section class="career-section">
+      <h2>경력</h2>
+      <ul class="career-list">
+        <li>
+          <span class="career-period">2023.03 ~ 현재</span>
+          <span class="career-detail">ABC Tech - 프론트엔드 개발자</span>
+        </li>
+        <li>
+          <span class="career-period">2021.01 ~ 2023.02</span>
+          <span class="career-detail">XYZ Studio - UI/UX 디자이너</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+`;

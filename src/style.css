@@ -22,22 +22,80 @@ a:hover {
   color: #535bf2;
 }
 
+h1 {
 body {
+  background: #f6f6f6;
+  color: #222;
+  font-family: 'Pretendard', 'Noto Sans KR', Arial, sans-serif;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.intro-container {
+  max-width: 480px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
+.profile-section {
+  text-align: center;
+}
+
+.name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: #222;
+}
+
+.bio {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+}
+
+.career-section h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1em;
+  color: #222;
+}
+
+.career-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.career-list li {
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2;
+  border-radius: 8px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.career-period {
+  font-size: 0.98rem;
+  color: #888;
+  margin-bottom: 0.3em;
+}
+
+.career-detail {
+  font-size: 1.08rem;
+  color: #222;
+  font-weight: 500;
+}
   padding: 2rem;
   text-align: center;
 }
