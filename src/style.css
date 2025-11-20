@@ -1,3 +1,79 @@
+/* 움직이는 배경 효과 */
+body {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed;
+  left: 0; top: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background: linear-gradient(120deg, #ff6a00, #ee0979, #00c3ff, #ffe259, #43e97b, #38f9d7, #fa8bff, #f3f3f3);
+  background-size: 200% 200%;
+  animation: bg-move 10s ease-in-out infinite alternate;
+  opacity: 0.9;
+}
+@keyframes bg-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* 프로필 이모지 애니메이션 */
+.animated-profile {
+  animation: rotate-profile 6s linear infinite alternate;
+}
+@keyframes rotate-profile {
+  0% { transform: rotate(-10deg) scale(1); }
+  50% { transform: rotate(10deg) scale(1.08); }
+  100% { transform: rotate(-10deg) scale(1); }
+}
+
+/* 무지개 그라데이션 텍스트 */
+.rainbow-text {
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #00c3ff, #ffe259, #43e97b, #38f9d7, #fa8bff);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: rainbow-move 5s linear infinite alternate;
+}
+@keyframes rainbow-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* 네온 효과 텍스트 */
+.neon-text {
+  color: #fff;
+  text-shadow: 0 0 8px #00c3ff, 0 0 16px #ee0979, 0 0 32px #ff6a00;
+  font-weight: 700;
+}
+
+.emoji {
+  font-size: 1.5em;
+  animation: emoji-bounce 1.5s infinite alternate;
+}
+@keyframes emoji-bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px) scale(1.15); }
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-hand 2s infinite;
+  transform-origin: 70% 70%;
+}
+@keyframes wave-hand {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
 body {
   background: linear-gradient(120deg, #ff6a00 0%, #ee0979 40%, #00c3ff 100%);
   color: #fff;
